@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:chrome="http://www.mozilla.org/rdf/chrome#">
+  <Seq about="urn:mozilla:package:root">
+    <li resource="urn:mozilla:package:rtsearch"/>
+  </Seq>
+
+  <Description about="urn:mozilla:package:rtsearch"
+        chrome:name="rtsearch"
+        chrome:extension="true"
+        chrome:displayName="Request Tracker Search"
+        chrome:author="University of British Columbia"
+        chrome:authorURL="http://www.ece.ubc.ca/"
+        chrome:description="Request Tracker support for Quick Search bar"
+  />
+        <!--
+        chrome:settingsURL="chrome://myext/content/"
+        -->
+
+  <Seq about="urn:mozilla:overlays">
+    <li resource="chrome://messenger/content/messenger.xul"/>
+  </Seq>
+
+  <Seq about="chrome://messenger/content/messenger.xul">
+    <li>chrome://rtsearch/content/messenger-rtsearch-overlay.xul</li>
+  </Seq>
+</RDF>

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<!-- Copyright 2006, 2014 The University of British Columbia and Derek Poon
+     Released under the Mozilla Public License, v2.0. -->
+<!DOCTYPE overlay SYSTEM "chrome://rtsearch/locale/overlay.dtd">
+<overlay id="messenger-rtsearch-overlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script src="rtsearch.js"/>
+</overlay>

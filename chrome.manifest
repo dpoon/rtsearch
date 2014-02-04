@@ -1,0 +1,29 @@
+######################################################################
+# Extension chrome manifest for Thunderbird 1.5+.
+#
+# Copyright 2006, 2014 The University of British Columbia and Derek Poon
+# Released under the Mozilla Public License, v2.0.
+#
+# For rapid development, unpack the JAR file, uncomment the lines
+# below with the file: URLs and comment out the lines with the JAR
+# URLs.
+#
+# Thunderbird 1.0 consults the **/contents.rdf files instead of this
+# file.  For rapid development in Thunderbird 1.0, unpack the JAR and
+# edit the chrome registry ($PROFILE_DIR/chrome/chrome.rdf) manually
+# with this substitution:
+#       s#"jar:\(file://.*/\)rtsearch.jar!\(/.*\)"#"\1\2"#
+# To undo that hack, the inverse transformation would be:
+#       s#"\(file://.*/\)\(/.*\)"#"jar:\1rtsearch.jar!\2"#
+######################################################################
+
+content rtsearch    jar:chrome/rtsearch.jar!/content/rtsearch/
+#content rtsearch   file:chrome/content/rtsearch/
+
+overlay chrome://messenger/content/messenger.xul                            chrome://rtsearch/content/messenger-rtsearch-overlay.xul
+
+locale  rtsearch    en-US   jar:chrome/rtsearch.jar!/locale/en-US/rtsearch/
+#locale rtsearch    en-US   file:chrome/locale/en-US/rtsearch/
+
+skin    rtsearch    classic/1.0 jar:chrome/rtsearch.jar!/skin/classic/rtsearch/
+#skin   rtsearch    classic/1.0 file:chrome/skin/classic/rtsearch/
